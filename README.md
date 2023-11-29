@@ -16,6 +16,8 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+<img width="1538" alt="Screenshot 2023-11-29 at 3 45 33 PM" src="https://github.com/chanzuckerberg/create-sds-app/assets/6309723/a5580d3c-4da0-4c02-98a1-1b0b7d644ec4">
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
