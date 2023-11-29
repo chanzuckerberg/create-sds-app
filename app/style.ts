@@ -29,7 +29,7 @@ export const Code = styled.code`
 
 export const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, minmax(25%, auto));
+  grid-template-columns: repeat(4, minmax(25%, auto));
   max-width: 100%;
   width: var(--max-width);
 `;

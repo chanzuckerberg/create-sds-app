@@ -45,6 +45,17 @@ export default function Home() {
         </Card>
 
         <Card
+          href="https://nextjs.org/docs"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2>
+            Next.js Docs <span>-&gt;</span>
+          </h2>
+          <p>Learn about Next.js features and API</p>
+        </Card>
+
+        <Card
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
