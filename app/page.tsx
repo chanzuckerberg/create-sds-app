@@ -1,13 +1,19 @@
+/**
+ * (thuang): Emotion currently doesn't support React Server Components,
+ * so we need to add "use client" to the top of the file for now.
+ */
+"use client";
+
 import Image from "next/image";
-import styles from "./page.module.css";
+import { Card, Center, Code, Description, Grid, Logo, Main } from "@/app/style";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
+    <Main>
+      <Description>
         <p>
           Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
+          <Code>app/page.tsx</Code>
         </p>
         <div>
           <a
@@ -19,30 +25,28 @@ export default function Home() {
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
-              className={styles.vercelLogo}
+              className="vercelLogo"
               width={100}
               height={24}
               priority
             />
           </a>
         </div>
-      </div>
+      </Description>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
+      <Center>
+        <Logo
           src="/next.svg"
           alt="Next.js Logo"
           width={180}
           height={37}
           priority
         />
-      </div>
+      </Center>
 
-      <div className={styles.grid}>
-        <a
+      <Grid>
+        <Card
           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -50,11 +54,10 @@ export default function Home() {
             Docs <span>-&gt;</span>
           </h2>
           <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+        </Card>
 
-        <a
+        <Card
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -62,11 +65,10 @@ export default function Home() {
             Learn <span>-&gt;</span>
           </h2>
           <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+        </Card>
 
-        <a
+        <Card
           href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -74,11 +76,10 @@ export default function Home() {
             Templates <span>-&gt;</span>
           </h2>
           <p>Explore starter templates for Next.js.</p>
-        </a>
+        </Card>
 
-        <a
+        <Card
           href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -88,8 +89,8 @@ export default function Home() {
           <p>
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
-        </a>
-      </div>
-    </main>
+        </Card>
+      </Grid>
+    </Main>
   );
 }
