@@ -9,8 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@czi-sds/components": "^19.0.0",
+    "@emotion/core": "^11.0.0",
+    "@emotion/css": "^11.11.2",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@mui/base": "^5.0.0-beta.24",
+    "@mui/icons-material": "^5.14.18",
+    "@mui/lab": "^5.0.0-alpha.153",
+    "@mui/material": "^5.14.18",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18"
@@ -27,6 +34,7 @@
     "eslint-plugin-jsx-expressions": "^1.3.2",
     "eslint-plugin-mdx": "^2.2.0",
     "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-sonarjs": "^0.23.0",
     "prettier": "^3.1.0",
     "prettier-plugin-organize-imports": "^3.2.4",

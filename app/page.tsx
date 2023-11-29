@@ -4,8 +4,8 @@
  */
 "use client";
 
-import Image from "next/image";
-import { Card, Center, Code, Description, Grid, Logo, Main } from "@/app/style";
+import { Card, Center, Code, Description, Grid, Main } from "@/app/style";
+import { Button } from "@czi-sds/components";
 
 export default function Home() {
   return (
@@ -15,45 +15,33 @@ export default function Home() {
           Get started by editing&nbsp;
           <Code>app/page.tsx</Code>
         </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="vercelLogo"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
       </Description>
 
       <Center>
-        <Logo
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+        <Button sdsType="primary" sdsStyle="rounded">
+          Primary Rounded
+        </Button>
+
+        <Button sdsType="primary" sdsStyle="square">
+          Primary Square
+        </Button>
+
+        <Button sdsType="primary">Primary Minimal</Button>
       </Center>
 
       <Grid>
         <Card
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="https://sds.czi.design"
           target="_blank"
           rel="noopener noreferrer"
         >
           <h2>
-            Docs <span>-&gt;</span>
+            SDS Docs <span>-&gt;</span>
           </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
+          <p>
+            Find in-depth information about Science Design System (SDS) features
+            and API.
+          </p>
         </Card>
 
         <Card
@@ -62,33 +50,20 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <h2>
-            Learn <span>-&gt;</span>
+            Learn Next.js <span>-&gt;</span>
           </h2>
           <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
         </Card>
 
         <Card
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </Card>
-
-        <Card
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="https://czi.atlassian.net/wiki/spaces/SI/pages/2050621483/Happy+Path+Intro"
           target="_blank"
           rel="noopener noreferrer"
         >
           <h2>
             Deploy <span>-&gt;</span>
           </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
+          <p>Learn about how to use Happy to deploy your app</p>
         </Card>
       </Grid>
     </Main>

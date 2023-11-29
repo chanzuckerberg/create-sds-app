@@ -1,15 +1,12 @@
 import styled from "@emotion/styled";
-import Image from "next/image";
 
 export const Description = styled.div`
   display: inherit;
   justify-content: inherit;
   align-items: inherit;
   font-size: 0.85rem;
-  max-width: var(--max-width);
   width: 100%;
   z-index: 2;
-  font-family: var(--font-mono);
 
   a {
     display: flex;
@@ -22,9 +19,6 @@ export const Description = styled.div`
     position: relative;
     margin: 0;
     padding: 1rem;
-    background-color: rgba(var(--callout-rgb), 0.5);
-    border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-    border-radius: var(--border-radius);
   }
 `;
 
@@ -35,7 +29,7 @@ export const Code = styled.code`
 
 export const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
+  grid-template-columns: repeat(3, minmax(25%, auto));
   max-width: 100%;
   width: var(--max-width);
 `;
@@ -73,35 +67,7 @@ export const Center = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 4rem 0;
-
-  :before {
-    background: var(--secondary-glow);
-    border-radius: 50%;
-    width: 480px;
-    height: 360px;
-    margin-left: -400px;
-  }
-
-  :after {
-    background: var(--primary-glow);
-    width: 240px;
-    height: 180px;
-    z-index: -1;
-  }
-
-  :before,
-  :after {
-    content: "";
-    left: 50%;
-    position: absolute;
-    filter: blur(45px);
-    transform: translateZ(0);
-  }
-`;
-
-export const Logo = styled(Image)`
-  position: relative;
+  gap: 1rem;
 `;
 
 export const Main = styled.main`
@@ -152,7 +118,7 @@ export const Main = styled.main`
     }
 
     ${Center} {
-      padding: 8rem 0 6rem;
+      padding: 4rem 0 6rem;
     }
 
     ${Center}::before {
@@ -211,16 +177,6 @@ export const Main = styled.main`
   @media (min-width: 701px) and (max-width: 1120px) {
     ${Grid} {
       grid-template-columns: repeat(2, 50%);
-    }
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .vercelLogo {
-      filter: invert(1);
-    }
-
-    ${Logo} {
-      filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
     }
   }
 
