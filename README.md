@@ -1,3 +1,9 @@
+# Create SDS App Template
+
+## Project Status
+
+**⚠️ Unstable. Early, active development, and may lack sufficient end-user documentation, assistance, etc., for anything other than the earliest adopters.**
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
