@@ -26,7 +26,9 @@ export default function Home() {
           Primary Square
         </Button>
 
-        <Button sdsType="primary">Primary Minimal</Button>
+        <Button sdsType="primary" sdsStyle="minimal">
+          Primary Minimal
+        </Button>
       </Center>
 
       <Grid>

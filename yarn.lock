@@ -65,6 +65,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.23.9":
+  version: 7.24.0
+  resolution: "@babel/runtime@npm:7.24.0"
+  dependencies:
+    regenerator-runtime: "npm:^0.14.0"
+  checksum: 10c0/3495eed727bf4a4f84c35bb51ab53317ae38f4bbc3b1d0a8303751f9dfa0ce6f5fb2afced72b76c3dd0d8bb2ccb84787559a4dee9886291a36b26f02f0f759b4
+  languageName: node
+  linkType: hard
+
 "@babel/types@npm:^7.22.15":
   version: 7.23.5
   resolution: "@babel/types@npm:7.23.5"
@@ -485,6 +494,29 @@ __metadata:
     "@types/react":
       optional: true
   checksum: 10c0/5bcf7755ffc59c0b82dc0907a0ade70774d8ab9a725ff41cb8733e7c4b91be52d56073eb758130c7f6948c7eaba2cc7464074c2839b71fdef4ef8e359b95cafd
+  languageName: node
+  linkType: hard
+
+"@mui/material-nextjs@npm:^5.15.11":
+  version: 5.15.11
+  resolution: "@mui/material-nextjs@npm:5.15.11"
+  dependencies:
+    "@babel/runtime": "npm:^7.23.9"
+  peerDependencies:
+    "@emotion/cache": ^11.11.0
+    "@emotion/server": ^11.11.0
+    "@mui/material": ^5.0.0
+    "@types/react": ^17.0.0 || ^18.0.0
+    next: ^13.0.0 || ^14.0.0
+    react: ^17.0.0 || ^18.0.0
+  peerDependenciesMeta:
+    "@emotion/cache":
+      optional: true
+    "@emotion/server":
+      optional: true
+    "@types/react":
+      optional: true
+  checksum: 10c0/1d01366b6a9501785571082dd2e5e5dc449ffb7ea95fa65f80508a763e716817f4832575b2f97f7b4749f1ea990ffd1b6b95aa7945ed7d0e6bb83d58be85d22f
   languageName: node
   linkType: hard
 
@@ -1718,6 +1750,7 @@ __metadata:
   resolution: "create-sds-app@workspace:."
   dependencies:
     "@czi-sds/components": "npm:^19.0.0"
+    "@emotion/cache": "npm:^11.11.0"
     "@emotion/core": "npm:^11.0.0"
     "@emotion/css": "npm:^11.11.2"
     "@emotion/react": "npm:^11.11.1"
@@ -1726,6 +1759,7 @@ __metadata:
     "@mui/icons-material": "npm:^5.14.18"
     "@mui/lab": "npm:^5.0.0-alpha.153"
     "@mui/material": "npm:^5.14.18"
+    "@mui/material-nextjs": "npm:^5.15.11"
     "@types/node": "npm:^20"
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
