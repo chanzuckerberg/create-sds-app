@@ -1,11 +1,5 @@
-/**
- * (thuang): Emotion currently doesn't support React Server Components,
- * so we need to add "use client" to the top of the file for now.
- */
-"use client";
-
 import { Card, Center, Code, Description, Grid, Main } from "@/app/style";
-import { Button } from "@czi-sds/components";
+import { StyledButton } from './style'
 
 export default function Home() {
   return (
@@ -18,17 +12,17 @@ export default function Home() {
       </Description>
 
       <Center>
-        <Button sdsType="primary" sdsStyle="rounded">
+        <StyledButton sdsType="primary" sdsStyle="rounded">
           Primary Rounded
-        </Button>
+        </StyledButton>
 
-        <Button sdsType="primary" sdsStyle="square">
+        <StyledButton sdsType="primary" sdsStyle="square">
           Primary Square
-        </Button>
+        </StyledButton>
 
-        <Button sdsType="primary" sdsStyle="minimal">
+        <StyledButton sdsType="primary" sdsStyle="minimal">
           Primary Minimal
-        </Button>
+        </StyledButton>
       </Center>
 
       <Grid>

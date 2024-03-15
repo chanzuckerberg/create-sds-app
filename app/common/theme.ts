@@ -1,3 +1,5 @@
+"use client";
+
 /**
  * (thuang): Custom theme for the app here
  */
@@ -305,8 +307,9 @@ export const fontWeightRegular = (props: CommonThemeProps) =>
 /**
  * font-weight 600
  */
-export const fontWeightSemibold = (props: CommonThemeProps) =>
-  getFontWeights(props)?.semibold;
+export const fontWeightSemibold = (props: CommonThemeProps) => {
+  return getFontWeights(props)?.semibold;
+};
 
 // Shadow
 export const shadowL = (props: CommonThemeProps) => getShadows(props)?.l;

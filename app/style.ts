@@ -1,4 +1,12 @@
+"use client";
+
+import { fontWeightSemibold } from "@/app/common/theme";
 import styled from "@emotion/styled";
+import { Button } from "@czi-sds/components";
+
+export const StyledButton = styled(Button)`
+  font-weight: ${fontWeightSemibold};
+`;
 
 export const Description = styled.div`
   display: inherit;
@@ -189,10 +197,3 @@ export const Main = styled.main`
     }
   }
 `;
-
-// DEBUG
-// DEBUG
-// DEBUG
-// DEBUG
-// Server: "MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-yov70s-MuiButtonBase-root-MuiButton-root-fontHeaderXxxsundefinedundefined-capsundefinedundefined"
-// Client: "MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-1v79q0c-MuiButtonBase-root-MuiButton-root"
