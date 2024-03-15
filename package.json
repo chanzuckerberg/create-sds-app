@@ -42,5 +42,6 @@
     "stylelint-config-recommended": "^13.0.0",
     "stylelint-config-standard": "^34.0.0",
     "typescript": "^5"
-  }
+  },
+  "packageManager": "yarn@4.1.1"
 }
