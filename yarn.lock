@@ -129,9 +129,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@czi-sds/components@npm:^20.1.2":
-  version: 20.1.2
-  resolution: "@czi-sds/components@npm:20.1.2"
+"@czi-sds/components@npm:^20.2.0":
+  version: 20.2.0
+  resolution: "@czi-sds/components@npm:20.2.0"
   peerDependencies:
     "@emotion/core": ^11.0.0
     "@emotion/css": ^11.11.2
@@ -143,7 +143,7 @@ __metadata:
     "@mui/material": ^5.15.3
     react: ">=17.0.1"
     react-dom: ">=17.0.1"
-  checksum: 10c0/ccfdafa8e63c79f5bed387a2175bfc0ed75d009ab9b51fbfc622a86923140093e1627eee19da10dcf6285248a8bba6016cca64abe2d6d81dfb823cad618a26e8
+  checksum: 10c0/89dd95d2d68c69739d758642853861a81b2d8ffb6548155f96ba9e3c096b24fed6169451d71aaac42eb472690d864532ee26bde3300d6d8956bc93c4547a6669
   languageName: node
   linkType: hard
 
@@ -1818,7 +1818,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "create-sds-app@workspace:."
   dependencies:
-    "@czi-sds/components": "npm:^20.1.2"
+    "@czi-sds/components": "npm:^20.2.0"
     "@emotion/cache": "npm:^11.11.0"
     "@emotion/core": "npm:^11.0.0"
     "@emotion/css": "npm:^11.11.2"
