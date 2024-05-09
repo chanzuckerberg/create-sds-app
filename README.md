@@ -22,7 +22,9 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-<img width="1538" alt="Screenshot 2023-11-29 at 3 45 33 PM" src="https://github.com/chanzuckerberg/create-sds-app/assets/6309723/a5580d3c-4da0-4c02-98a1-1b0b7d644ec4">
+<p align="center">
+  <img width="800" alt="Screenshot 2023-11-29 at 3 45 33 PM" src="https://github.com/chanzuckerberg/create-sds-app/assets/927990/4614e0c7-14f4-46c1-b3d4-2b8a07367030">
+</p>
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
