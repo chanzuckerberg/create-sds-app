@@ -50,9 +50,9 @@ const iconSizes = {
   input: { height: 16, width: 16 }, // for use with input icons only (radio and checkbox)
   l: { height: 24, width: 24 },
   m: { height: 16, width: 16 },
-  s: { height: 12, width: 12 },
+  s: { height: 16, width: 16 },
   xl: { height: 32, width: 32 },
-  xs: { height: 8, width: 8 },
+  xs: { height: 12, width: 12 },
 };
 
 const spacing = {
