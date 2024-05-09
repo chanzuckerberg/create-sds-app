@@ -1,5 +1,5 @@
 import { Card, Center, Code, Description, Grid, Main } from "@/app/style";
-import { StyledButton } from './style'
+import { StyledButton } from "./style";
 
 export default function Home() {
   return (
@@ -12,6 +12,13 @@ export default function Home() {
       </Description>
 
       <Center>
+        <StyledButton
+          sdsType="primary"
+          sdsStyle="icon"
+          sdsSize="large"
+          icon="DNA"
+        />
+
         <StyledButton sdsType="primary" sdsStyle="rounded">
           Primary Rounded
         </StyledButton>
