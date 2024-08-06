@@ -8,17 +8,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Create a new project: Run `npx create-next-app --example https://github.com/chanzuckerberg/create-sds-app YOUR_PROJECT_NAME`
+2. `cd` into the new project directory and run `npm i && npm run dev` to start developing the app!
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
