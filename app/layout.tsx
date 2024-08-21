@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 
 const CACHE_PROVIDER_OPTIONS = {
   key: "css",
+  prepend: true,
 };
 
 export default function RootLayout({
