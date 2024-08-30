@@ -85,6 +85,7 @@ export const Main = styled.main`
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  
 
   /* Enable hover only on non-touch devices */
   @media (hover: hover) and (pointer: fine) {
