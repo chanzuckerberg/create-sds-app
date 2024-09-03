@@ -1,0 +1,35 @@
+# How to update documentation
+## Editing Steps
+1. Find the file you'd like to update and open it up
+2. Click on the pencil icon in the upper right to edit. You will most-likely want to "Edit in place"
+3. Make your edits using [github's markdown sytax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+4. Click on "Preview" to see your markdown in action. Note: custom components won't show in Github's preview.
+5. Click on "Commit changes" (don't worry, you can check everything after this) and use the default "Create a new branch"
+6. This will take you to the PR screen. You'll want to name your PR something readable and add the prefix "chore: " (unless this is a feature or something else, more info [here](https://www.conventionalcommits.org/en/v1.0.0/))
+7. If you want to see what your changes will look like on the live site, add the label "stack" to your PR. This will trigger the rdev build where you can use the app. The current examples live on `/documentation/privacy-policy`, `documentation/faq` and `documentation/data-submission-policy`
+8. If you want to make further changes to your file, go to the top of the github page and click "Code". Then click on the branch dropdown, which probably says "main" right now. In the dropdown, search for your branch name and select it.
+9. Once you're on your branch, you can find the file again and make additional edits. In this repo, the documentation is in `chat-client/website-docs`.
+10. When you commit again, keep the default, which is to add to your existing branch.
+
+## Adding a new page
+1. Open up the `website-docs` folder and click the "Add file" button
+2. Be sure to name your file with no spaces and the file type must be `.mdx`.  If your preview isn't working, it might be because the file isn't named yet or it doesn't have the right ending.  Note: .md files will look fine on Github, but won't render our custom components.
+3. From here, use the editing steps above.
+4. Once the new .mdx file is ready, an engineer will need to make a route for it.  They will need to know the file name and the url where you want to file to be displayed.
+
+## Custom Components
+We have custom components available in our application:
+* Accordion
+* Body
+* Class
+* Email
+* Function
+* Str
+* Op
+* Punc
+* PageTitle
+
+Examples of how these are used can be found in these files:
+`example-data-submission-policy.mdx`
+`example-faq.mdx`
+`emample-privacy-policy.mdx`
