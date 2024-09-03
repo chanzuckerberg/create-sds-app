@@ -47,7 +47,7 @@ export const CustomThemeProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   if (!theme) {
-    return null;
+    return <>{children}</>;
   }
   return <MuiThemeProvider theme={theme}>{children}</MuiThemeProvider>;
 };
