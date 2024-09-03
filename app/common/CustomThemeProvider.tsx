@@ -11,33 +11,14 @@ import {
 } from "@mui/material";
 import { ReactNode, useState, useEffect } from "react";
 import { customTheme, primaryColors } from "./theme";
-import { ThemeMode, ThemeContext } from "../context/themeContext.context";
+
+export type ThemeMode = "light" | "dark";
 
 // CustomThemeProvider component to wrap your app
 export const CustomThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [themeMode, setThemeMode] = useState<ThemeMode>("light");
   const [theme, setTheme] = useState<Theme>();
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-
-    // Set initial theme based on system preference
-    setThemeMode(mediaQuery.matches ? "dark" : "light");
-
-    const handleThemeChange = (e: MediaQueryListEvent) => {
-      setThemeMode(e.matches ? "dark" : "light");
-    };
-
-    // Listen for theme changes
-    mediaQuery.addEventListener("change", handleThemeChange);
-
-    // Clean up event listener on unmount
-    return () => {
-      mediaQuery.removeEventListener("change", handleThemeChange);
-    };
-  }, []);
-
-  useEffect(() => {
+  const updateTheme = (themeMode: ThemeMode) => {
     const baseTheme =
       themeMode === "light" ? SDSLightAppTheme : SDSDarkAppTheme;
     const themeOptions = { ...baseTheme, ...customTheme };
@@ -49,11 +30,29 @@ export const CustomThemeProvider = ({ children }: { children: ReactNode }) => {
 
     const appTheme = makeThemeOptions(themeOptions, themeMode);
     setTheme(createTheme(appTheme));
-  }, [themeMode]);
+  };
 
-  return (
-    <ThemeContext.Provider value={{ themeMode, setThemeMode }}>
-      {theme && <MuiThemeProvider theme={theme}>{children}</MuiThemeProvider>}
-    </ThemeContext.Provider>
-  );
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+    // Set initial theme based on system preference
+    updateTheme(mediaQuery.matches ? "dark" : "light");
+
+    const handleThemeChange = (e: MediaQueryListEvent) => {
+      updateTheme(e.matches ? "dark" : "light");
+    };
+
+    // Listen for theme changes
+    mediaQuery.addEventListener("change", handleThemeChange);
+
+    // Clean up event listener on unmount
+    return () => {
+      mediaQuery.removeEventListener("change", handleThemeChange);
+    };
+  }, []);
+
+  if (!theme) {
+    return null;
+  }
+  return <MuiThemeProvider theme={theme}>{children}</MuiThemeProvider>;
 };
