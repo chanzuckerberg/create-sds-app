@@ -20,13 +20,11 @@ export const CustomThemeProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    console.log(mediaQuery);
 
     // Set initial theme based on system preference
     setThemeMode(mediaQuery.matches ? "dark" : "light");
 
     const handleThemeChange = (e: MediaQueryListEvent) => {
-      console.log("handleThemeChange", e);
       setThemeMode(e.matches ? "dark" : "light");
     };
 
@@ -40,7 +38,6 @@ export const CustomThemeProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   useEffect(() => {
-    console.log("themeMode useEffect", themeMode);
     const baseTheme =
       themeMode === "light" ? SDSLightAppTheme : SDSDarkAppTheme;
     const themeOptions = { ...baseTheme, ...customTheme };
