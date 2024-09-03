@@ -354,19 +354,6 @@ export const customTheme = {
   typography,
 };
 
-// Colors
-
-export const primaryColors = {
-  "100": "#EBF5FF",
-  "200": "#7DBCFF",
-  "300": "#4599FF",
-  "400": "#0073FF",
-  "500": "#0056C6",
-  "600": "#00429F",
-  "700": "#e2eeff",
-  "800": "#f7faff",
-};
-
 export const textPrimary = (props: CommonThemeProps) =>
   getPalette(props)?.text?.primary;
 

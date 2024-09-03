@@ -10,7 +10,7 @@ import {
   Theme,
 } from "@mui/material";
 import { ReactNode, useState, useEffect } from "react";
-import { customTheme, primaryColors } from "./theme";
+import { customTheme } from "./theme";
 
 export type ThemeMode = "light" | "dark";
 
@@ -22,11 +22,6 @@ export const CustomThemeProvider = ({ children }: { children: ReactNode }) => {
     const baseTheme =
       themeMode === "light" ? SDSLightAppTheme : SDSDarkAppTheme;
     const themeOptions = { ...baseTheme, ...customTheme };
-    themeOptions.colors.blue = primaryColors;
-    themeOptions.colors.gray = {
-      ...themeOptions.colors.gray,
-      "400": "#999999",
-    };
 
     const appTheme = makeThemeOptions(themeOptions, themeMode);
     setTheme(createTheme(appTheme));
