@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   compiler: {
-    emotion: true,
+    emotion: {
+      autoLabel: "never",
+      sourceMap: false,
+    },
   },
 };
 

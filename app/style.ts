@@ -2,7 +2,7 @@
 
 import { fontWeightSemibold } from "@/app/common/theme";
 import styled from "@emotion/styled";
-import { Button } from "@czi-sds/components";
+import { Button, CommonThemeProps, getColors } from "@czi-sds/components";
 
 export const StyledButton = styled(Button)`
   font-weight: ${fontWeightSemibold};
@@ -85,6 +85,14 @@ export const Main = styled.main`
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  ${(props: CommonThemeProps) => {
+    const colors = getColors(props);
+
+    return `
+      background-color: ${colors?.gray[100]};
+      color: ${colors?.gray[900]};
+    `;
+  }}
 
   /* Enable hover only on non-touch devices */
   @media (hover: hover) and (pointer: fine) {

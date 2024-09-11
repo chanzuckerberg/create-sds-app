@@ -6,16 +6,14 @@
 
 import {
   CommonThemeProps,
-  SDSAppTheme,
+  SDSLightAppTheme,
   getColors,
   getCorners,
   getFontWeights,
   getPalette,
   getShadows,
   getSpaces,
-  makeThemeOptions,
 } from "@czi-sds/components";
-import { createTheme } from "@mui/material/styles";
 
 import { Inter, IBM_Plex_Mono } from "next/font/google";
 
@@ -44,7 +42,8 @@ export const ibm_plex_mono = IBM_Plex_Mono({
   weight: ["400", "600"],
 });
 
-const { fontWeights } = SDSAppTheme;
+// fontWeights are shared between light and dark themes
+const { fontWeights } = SDSLightAppTheme;
 
 const iconSizes = {
   input: { height: 16, width: 16 }, // for use with input icons only (radio and checkbox)
@@ -348,24 +347,11 @@ const typography = {
   },
 };
 
-const customTheme = {
+export const customTheme = {
   corners,
   iconSizes,
   spacing,
   typography,
-};
-
-const themeOptions = { ...SDSAppTheme, ...customTheme };
-
-// Colors
-
-const primaryColors = {
-  "100": "#EBF5FF",
-  "200": "#7DBCFF",
-  "300": "#4599FF",
-  "400": "#0073FF",
-  "500": "#0056C6",
-  "600": "#00429F",
 };
 
 export const textPrimary = (props: CommonThemeProps) =>
@@ -391,8 +377,6 @@ export const primary500 = (props: CommonThemeProps) =>
 
 export const primary600 = (props: CommonThemeProps) =>
   getColors(props)?.blue[600];
-
-themeOptions.colors.blue = primaryColors;
 
 /**
  * (masoudmanson): SDS Theme does not include info colors as part of the primitive colors.
@@ -460,8 +444,6 @@ export const gray600 = grey600;
 export const greyWhite = () => "#ffffff";
 export const grayWhite = greyWhite;
 
-themeOptions.colors.gray = { ...themeOptions.colors.gray, "400": "#999999" };
-
 export const beta100 = (props: CommonThemeProps) =>
   getColors(props)?.purple[100];
 
@@ -498,7 +480,3 @@ export const fontWeightSemibold = (props: CommonThemeProps) =>
 export const shadowL = (props: CommonThemeProps) => getShadows(props)?.l;
 export const shadowM = (props: CommonThemeProps) => getShadows(props)?.m;
 export const shadowS = (props: CommonThemeProps) => getShadows(props)?.s;
-
-const appTheme = makeThemeOptions(themeOptions);
-
-export const theme = createTheme(appTheme);
