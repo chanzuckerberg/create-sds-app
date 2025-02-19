@@ -1,53 +1,51 @@
 "use client";
+
 import {
   SDSLightAppTheme,
   SDSDarkAppTheme,
   makeThemeOptions,
 } from "@czi-sds/components";
-import {
-  createTheme,
-  ThemeProvider as MuiThemeProvider,
-  Theme,
-} from "@mui/material";
-import { ReactNode, useState, useEffect } from "react";
-import { customTheme } from "./theme";
+import { createTheme, CssBaseline, useMediaQuery } from "@mui/material";
+import { ThemeProvider } from "@mui/material/styles";
+import { ReactNode } from "react";
+import { customThemeLight, customThemeDark } from "./theme";
 
 export type ThemeMode = "light" | "dark";
 
-// CustomThemeProvider component to wrap your app
-export const CustomThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [theme, setTheme] = useState<Theme>();
+const updateTheme = (themeMode: ThemeMode) => {
+  const baseTheme = themeMode === "light" ? SDSLightAppTheme : SDSDarkAppTheme;
+  const customTheme =
+    themeMode === "light" ? customThemeLight : customThemeDark;
 
-  const updateTheme = (themeMode: ThemeMode) => {
-    const baseTheme =
-      themeMode === "light" ? SDSLightAppTheme : SDSDarkAppTheme;
-    const themeOptions = { ...baseTheme, ...customTheme };
-
-    const appTheme = makeThemeOptions(themeOptions, themeMode);
-    setTheme(createTheme(appTheme));
+  const themeOptions = {
+    colors: { ...baseTheme.colors, ...customTheme.colors },
+    typography: { ...baseTheme.typography, ...customTheme.typography },
+    corners: { ...baseTheme.corners, ...customTheme.corners },
+    spacing: { ...baseTheme.spacing, ...customTheme.spacing },
+    shadows: { ...baseTheme.shadows, ...customTheme.shadows },
+    iconSizes: { ...baseTheme.iconSizes, ...customTheme.iconSizes },
+    fontWeights: { ...baseTheme.fontWeights, ...customTheme.fontWeights },
   };
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  const appTheme = makeThemeOptions(themeOptions, themeMode);
+  return createTheme(appTheme, {
+    cssVariables: true,
+  });
+};
 
-    // Set initial theme based on system preference
-    updateTheme(mediaQuery.matches ? "dark" : "light");
-
-    const handleThemeChange = (e: MediaQueryListEvent) => {
-      updateTheme(e.matches ? "dark" : "light");
-    };
-
-    // Listen for theme changes
-    mediaQuery.addEventListener("change", handleThemeChange);
-
-    // Clean up event listener on unmount
-    return () => {
-      mediaQuery.removeEventListener("change", handleThemeChange);
-    };
-  }, []);
+// CustomThemeProvider component to wrap your app
+export const CustomThemeProvider = ({ children }: { children: ReactNode }) => {
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+  const theme = updateTheme(prefersDarkMode ? "dark" : "light");
 
   if (!theme) {
     return <>{children}</>;
   }
-  return <MuiThemeProvider theme={theme}>{children}</MuiThemeProvider>;
+
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      {children}
+    </ThemeProvider>
+  );
 };
