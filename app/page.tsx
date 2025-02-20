@@ -17,6 +17,7 @@ export default function Home() {
           sdsStyle="icon"
           sdsSize="large"
           icon="DNA"
+          style={{ margin: 0 }}
         />
 
         <StyledButton sdsType="primary" sdsStyle="rounded">

@@ -1,4 +1,4 @@
-import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 const CACHE_PROVIDER_OPTIONS = {
-  key: "css",
+  key: "sds",
   prepend: true,
 };
 
