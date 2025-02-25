@@ -9,6 +9,7 @@ import { createTheme, CssBaseline, useMediaQuery } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import { ReactNode } from "react";
 import { customThemeLight, customThemeDark } from "./theme";
+import { deepmerge } from "@mui/utils";
 
 export type ThemeMode = "light" | "dark";
 
@@ -17,15 +18,7 @@ const updateTheme = (themeMode: ThemeMode) => {
   const customTheme =
     themeMode === "light" ? customThemeLight : customThemeDark;
 
-  const themeOptions = {
-    colors: { ...baseTheme.colors, ...customTheme.colors },
-    typography: { ...baseTheme.typography, ...customTheme.typography },
-    corners: { ...baseTheme.corners, ...customTheme.corners },
-    spacing: { ...baseTheme.spacing, ...customTheme.spacing },
-    shadows: { ...baseTheme.shadows, ...customTheme.shadows },
-    iconSizes: { ...baseTheme.iconSizes, ...customTheme.iconSizes },
-    fontWeights: { ...baseTheme.fontWeights, ...customTheme.fontWeights },
-  };
+  const themeOptions = deepmerge(baseTheme, customTheme);
 
   const appTheme = makeThemeOptions(themeOptions, themeMode);
   return createTheme(appTheme, {
