@@ -9,9 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@czi-sds/components": "^20.2.0",
-    "@emotion/cache": "^11.11.0",
-    "@emotion/core": "^11.0.0",
+    "@czi-sds/components": "^22.11.1",
+    "@emotion/cache": "^11.14.0",
     "@emotion/css": "^11.11.2",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
@@ -19,10 +18,13 @@
     "@mui/icons-material": "^5.15.3",
     "@mui/lab": "^5.0.0-alpha.159",
     "@mui/material": "^5.15.3",
-    "@mui/material-nextjs": "^5.15.11",
-    "next": "^14.1.3",
-    "react": "^18",
-    "react-dom": "^18"
+    "@mui/material-nextjs": "^6.4.3",
+    "@mui/utils": "^6.4.3",
+    "next": "^15.1.7",
+    "react": ">=17.0.1",
+    "react-dom": ">=17.0.1",
+    "react-redux": "^9.1.0",
+    "typescript": "5.3.3"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -42,8 +44,7 @@
     "prettier-plugin-organize-imports": "^3.2.4",
     "stylelint": "^15.11.0",
     "stylelint-config-recommended": "^13.0.0",
-    "stylelint-config-standard": "^34.0.0",
-    "typescript": "^5"
+    "stylelint-config-standard": "^34.0.0"
   },
   "packageManager": "yarn@4.1.1"
 }
