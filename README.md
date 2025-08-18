@@ -13,8 +13,14 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+### Light Mode
 <p align="center">
-  <img width="800" alt="Screenshot 2023-11-29 at 3 45 33 PM" src="https://github.com/chanzuckerberg/create-sds-app/assets/927990/4614e0c7-14f4-46c1-b3d4-2b8a07367030">
+  <img width="800" alt="Light Mode" src="https://github.com/user-attachments/assets/41259e44-e19f-4eeb-8d67-5871ae884c4a">
+</p>
+
+### Dark Mode
+<p align="center">
+  <img width="800" alt="Dark Mode" src="https://github.com/user-attachments/assets/ba8c3d19-d8ce-4b23-adc3-0d45742a3f81">
 </p>
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.

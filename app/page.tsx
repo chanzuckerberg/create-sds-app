@@ -1,7 +1,34 @@
-import { Card, Center, Code, Description, Grid, Main } from "@/app/style";
+"use client";
+
+import {
+  ButtonGroup,
+  Code,
+  CodeExampleWrapper,
+  Description,
+  Grid,
+  Main,
+} from "@/app/style";
 import { StyledButton } from "./style";
+import {
+  Icon,
+  Dropdown,
+  ContentCard,
+  ContentCardBody,
+} from "@czi-sds/components";
+import { useState } from "react";
+import Link from "next/link";
+
+const sizeOptions = [
+  { name: "Size xs", value: "xs" },
+  { name: "Size s", value: "s" },
+  { name: "Size m", value: "m" },
+  { name: "Size l", value: "l" },
+  { name: "Size xl", value: "xl" },
+];
 
 export default function Home() {
+  const [selectedSize, setSelectedSize] = useState(sizeOptions[2]);
+
   return (
     <Main>
       <Description>
@@ -11,74 +38,94 @@ export default function Home() {
         </p>
       </Description>
 
-      <Center>
-        <StyledButton
-          sdsType="primary"
-          sdsStyle="icon"
-          sdsSize="large"
-          icon="DNA"
+      <CodeExampleWrapper>
+        <p>Example SDS Buttons:</p>
+        <ButtonGroup>
+          <StyledButton
+            sdsType="primary"
+            sdsStyle="icon"
+            sdsSize="large"
+            icon="DNA"
+            style={{ margin: 0 }}
+          />
+
+          <StyledButton
+            sdsType="primary"
+            sdsStyle="rounded"
+            startIcon={<Icon sdsIcon="Copy" sdsSize="s" />}
+          >
+            Primary Rounded
+          </StyledButton>
+
+          <StyledButton sdsType="primary" sdsStyle="square">
+            Primary Square
+          </StyledButton>
+
+          <StyledButton sdsType="primary" sdsStyle="minimal" isAllCaps={false}>
+            Primary Minimal
+          </StyledButton>
+        </ButtonGroup>
+      </CodeExampleWrapper>
+
+      <CodeExampleWrapper>
+        <p>Example SDS Dropdown:</p>
+        <Dropdown
+          label="Select Size"
+          options={sizeOptions}
+          value={selectedSize}
+          multiple={false}
+          onChange={(_event, newValue) => {
+            if (
+              newValue &&
+              typeof newValue === "object" &&
+              "value" in newValue
+            ) {
+              setSelectedSize(newValue);
+            }
+          }}
+          InputDropdownProps={{
+            width: 200,
+          }}
         />
-
-        <StyledButton sdsType="primary" sdsStyle="rounded">
-          Primary Rounded
-        </StyledButton>
-
-        <StyledButton sdsType="primary" sdsStyle="square">
-          Primary Square
-        </StyledButton>
-
-        <StyledButton sdsType="primary" sdsStyle="minimal">
-          Primary Minimal
-        </StyledButton>
-      </Center>
+      </CodeExampleWrapper>
 
       <Grid>
-        <Card
-          href="https://sds.czi.design"
-          target="_blank"
-          rel="noopener noreferrer"
+        <ContentCard
+          visualElementType="icon"
+          clickableCard
+          clickableCardProps={{
+            href: "https://sds.czi.design",
+            target: "_blank",
+            component: Link,
+          }}
+          titleText="SDS Docs"
+          decorativeBorder
+          icon={<Icon sdsIcon="DNA" sdsSize="xl" />}
+          metadataText="ZeroHeight Documentation"
         >
-          <h2>
-            SDS Docs <span>-&gt;</span>
-          </h2>
-          <p>
+          <ContentCardBody>
             Find in-depth information about Science Design System (SDS) features
             and API.
-          </p>
-        </Card>
+          </ContentCardBody>
+        </ContentCard>
 
-        <Card
-          href="https://nextjs.org/docs"
-          target="_blank"
-          rel="noopener noreferrer"
+        <ContentCard
+          visualElementType="icon"
+          clickableCard
+          clickableCardProps={{
+            href: "https://nextjs.org/docs",
+            target: "_blank",
+            component: Link,
+          }}
+          titleText="Next.js Docs"
+          decorativeBorder
+          icon={<Icon sdsIcon="DNA" sdsSize="xl" />}
+          metadataText="NecxtJs Documentation"
         >
-          <h2>
-            Next.js Docs <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js features and API</p>
-        </Card>
-
-        <Card
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn Next.js <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </Card>
-
-        <Card
-          href="https://czi.atlassian.net/wiki/spaces/SI/pages/2050621483/Happy+Path+Intro"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>Learn about how to use Happy to deploy your app</p>
-        </Card>
+          <ContentCardBody>
+            Learn about Next.js features and API.
+          </ContentCardBody>
+        </ContentCard>
       </Grid>
     </Main>
   );
