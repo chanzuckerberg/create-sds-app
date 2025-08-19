@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@czi-sds/components": "^22.11.1",
+    "@czi-sds/components": "^22.11.3",
     "@emotion/cache": "^11.14.0",
     "@emotion/css": "^11.11.2",
     "@emotion/react": "^11.11.3",
