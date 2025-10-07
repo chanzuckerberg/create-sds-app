@@ -144,9 +144,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@czi-sds/components@npm:^22.11.3":
-  version: 22.11.3
-  resolution: "@czi-sds/components@npm:22.11.3"
+"@czi-sds/components@npm:^22.13.1":
+  version: 22.13.1
+  resolution: "@czi-sds/components@npm:22.13.1"
   peerDependencies:
     "@emotion/css": ^11.11.2
     "@emotion/react": ^11.11.3
@@ -157,7 +157,7 @@ __metadata:
     "@mui/material": ^5.15.3
     react: ">=17.0.1"
     react-dom: ">=17.0.1"
-  checksum: 10c0/149e83b6fc3cb7aea50871021c72a7f48c397baf2e055340709ef7ccce89a745098193856e726c5223ff2db659e33817e4092fc700c88edbf6a89511317b9e84
+  checksum: 10c0/28d28f77cbbb9bd3677c0b79453415159add59a83a87f08758aba6bcf237199352b7516cf77668cd8df4425a90e7f02bacfb27295bac14bede470b410c11a418
   languageName: node
   linkType: hard
 
@@ -2155,7 +2155,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "create-sds-app@workspace:."
   dependencies:
-    "@czi-sds/components": "npm:^22.11.3"
+    "@czi-sds/components": "npm:^22.13.1"
     "@emotion/cache": "npm:^11.14.0"
     "@emotion/css": "npm:^11.11.2"
     "@emotion/react": "npm:^11.11.3"
@@ -4816,20 +4816,6 @@ __metadata:
     braces: "npm:^3.0.3"
     picomatch: "npm:^2.3.1"
   checksum: 10c0/166fa6eb926b9553f32ef81f5f531d27b4ce7da60e5baf8c021d043b27a388fb95e46a8038d5045877881e673f8134122b59624d5cecbd16eb50a42e7a6b5ca8
-  languageName: node
-  linkType: hard
-
-"mimic-fn@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "mimic-fn@npm:2.1.0"
-  checksum: 10c0/b26f5479d7ec6cc2bce275a08f146cf78f5e7b661b18114e2506dd91ec7ec47e7a25bf4360e5438094db0560bcc868079fb3b1fb3892b833c1ecbf63f80c95a4
-  languageName: node
-  linkType: hard
-
-"mimic-fn@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "mimic-fn@npm:4.0.0"
-  checksum: 10c0/de9cc32be9996fd941e512248338e43407f63f6d497abe8441fa33447d922e927de54d4cc3c1a3c6d652857acd770389d5a3823f311a744132760ce2be15ccbf
   languageName: node
   linkType: hard
 
