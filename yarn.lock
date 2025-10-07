@@ -142,9 +142,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@czi-sds/components@npm:^22.11.3":
-  version: 22.11.3
-  resolution: "@czi-sds/components@npm:22.11.3"
+"@czi-sds/components@npm:^22.13.1":
+  version: 22.13.1
+  resolution: "@czi-sds/components@npm:22.13.1"
   peerDependencies:
     "@emotion/css": ^11.11.2
     "@emotion/react": ^11.11.3
@@ -155,7 +155,7 @@ __metadata:
     "@mui/material": ^5.15.3
     react: ">=17.0.1"
     react-dom: ">=17.0.1"
-  checksum: 10c0/149e83b6fc3cb7aea50871021c72a7f48c397baf2e055340709ef7ccce89a745098193856e726c5223ff2db659e33817e4092fc700c88edbf6a89511317b9e84
+  checksum: 10c0/28d28f77cbbb9bd3677c0b79453415159add59a83a87f08758aba6bcf237199352b7516cf77668cd8df4425a90e7f02bacfb27295bac14bede470b410c11a418
   languageName: node
   linkType: hard
 
@@ -2163,7 +2163,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "create-sds-app@workspace:."
   dependencies:
-    "@czi-sds/components": "npm:^22.11.3"
+    "@czi-sds/components": "npm:^22.13.1"
     "@emotion/cache": "npm:^11.14.0"
     "@emotion/css": "npm:^11.11.2"
     "@emotion/react": "npm:^11.11.3"
