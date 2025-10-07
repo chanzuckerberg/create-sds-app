@@ -84,7 +84,7 @@ export default function Home() {
             }
           }}
           InputDropdownProps={{
-            width: 200,
+            width: "200px",
           }}
         />
       </CodeExampleWrapper>
