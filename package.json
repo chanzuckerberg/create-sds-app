@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@czi-sds/components": "^22.13.1",
+    "@czi-sds/components": "^23.1.0",
     "@emotion/cache": "^11.14.0",
     "@emotion/css": "^11.11.2",
     "@emotion/react": "^11.11.3",
@@ -20,7 +20,7 @@
     "@mui/material": "^5.15.3",
     "@mui/material-nextjs": "^6.4.3",
     "@mui/utils": "^6.4.3",
-    "next": "^15.5.7",
+    "next": "^16.0.7",
     "react": ">=17.0.1",
     "react-dom": ">=17.0.1",
     "react-redux": "^9.1.0",

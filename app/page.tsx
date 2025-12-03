@@ -14,9 +14,14 @@ import {
   Dropdown,
   ContentCard,
   ContentCardBody,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+  Button,
+  Link,
 } from "@czi-sds/components";
 import { useState } from "react";
-import Link from "next/link";
 
 const sizeOptions = [
   { name: "Size xs", value: "xs" },
@@ -28,6 +33,13 @@ const sizeOptions = [
 
 export default function Home() {
   const [selectedSize, setSelectedSize] = useState(sizeOptions[2]);
+  const [isOpen, setIsOpen] = useState(false);
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+  const handleClick = () => {
+    setIsOpen(true);
+  };
 
   return (
     <Main>
@@ -87,6 +99,41 @@ export default function Home() {
             width: "200px",
           }}
         />
+      </CodeExampleWrapper>
+
+      <CodeExampleWrapper>
+        <p>Example SDS Dialog:</p>
+        <div>
+          <Button sdsStyle="minimal" sdsType="primary" onClick={handleClick}>
+            Open SDS Dialog
+          </Button>
+        </div>
+        <Dialog onClose={handleClose} open={isOpen} sdsSize="xs">
+          <DialogTitle
+            title="Dialog Title"
+            subtitle="This is an optional subtitle"
+            overline="This is an optional overline"
+            onClose={handleClose}
+          />
+          <DialogContent>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </DialogContent>
+          <DialogActions buttonPosition="right">
+            <Button sdsType="secondary" sdsStyle="square" onClick={handleClose}>
+              Cancel
+            </Button>
+            <Button sdsType="primary" sdsStyle="square" onClick={handleClose}>
+              Save
+            </Button>
+          </DialogActions>
+        </Dialog>
+      </CodeExampleWrapper>
+
+      <CodeExampleWrapper>
+        <Link href="#" sdsStyle="default">
+          SDS Link component
+        </Link>
       </CodeExampleWrapper>
 
       <Grid>
