@@ -20,7 +20,7 @@
     "@mui/material": "^5.15.3",
     "@mui/material-nextjs": "^6.4.3",
     "@mui/utils": "^6.4.3",
-    "next": "^16.0.7",
+    "next": "^16.0.9",
     "react": ">=17.0.1",
     "react-dom": ">=17.0.1",
     "react-redux": "^9.1.0",
