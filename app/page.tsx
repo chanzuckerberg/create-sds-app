@@ -53,28 +53,68 @@ export default function Home() {
       <CodeExampleWrapper>
         <p>Example SDS Buttons:</p>
         <ButtonGroup>
-          <StyledButton
-            sdsType="primary"
-            sdsStyle="icon"
-            sdsSize="large"
-            icon="DNA"
-            style={{ margin: 0 }}
-          />
+          <StyledButton sdsType="primary" size="large">
+            <Icon sdsIcon="Gene" sdsSize="s" />
+          </StyledButton>
 
           <StyledButton
             sdsType="primary"
-            sdsStyle="rounded"
+            sdsStyle="solid"
             startIcon={<Icon sdsIcon="Copy" sdsSize="s" />}
           >
-            Primary Rounded
+            Solid Primary
           </StyledButton>
 
-          <StyledButton sdsType="primary" sdsStyle="square">
-            Primary Square
+          <StyledButton sdsType="secondary" size="large">
+            <Icon sdsIcon="Gene" sdsSize="s" />
           </StyledButton>
 
-          <StyledButton sdsType="primary" sdsStyle="minimal" isAllCaps={false}>
-            Primary Minimal
+          <StyledButton sdsType="secondary" sdsStyle="solid">
+            Solid Secondary
+          </StyledButton>
+        </ButtonGroup>
+
+        <ButtonGroup>
+          <StyledButton sdsType="primary" size="large" sdsStyle="outline">
+            <Icon sdsIcon="Gene" sdsSize="s" />
+          </StyledButton>
+
+          <StyledButton
+            sdsType="primary"
+            sdsStyle="outline"
+            startIcon={<Icon sdsIcon="Copy" sdsSize="s" />}
+          >
+            Outline Primary
+          </StyledButton>
+
+          <StyledButton sdsType="secondary" size="large" sdsStyle="outline">
+            <Icon sdsIcon="Gene" sdsSize="s" />
+          </StyledButton>
+
+          <StyledButton sdsType="secondary" sdsStyle="outline">
+            Outline Secondary
+          </StyledButton>
+        </ButtonGroup>
+
+        <ButtonGroup>
+          <StyledButton sdsType="primary" size="large" sdsStyle="minimal">
+            <Icon sdsIcon="Gene" sdsSize="s" />
+          </StyledButton>
+
+          <StyledButton
+            sdsType="primary"
+            sdsStyle="minimal"
+            startIcon={<Icon sdsIcon="Copy" sdsSize="s" />}
+          >
+            Minimal Primary
+          </StyledButton>
+
+          <StyledButton sdsType="secondary" size="large" sdsStyle="minimal">
+            <Icon sdsIcon="Gene" sdsSize="s" />
+          </StyledButton>
+
+          <StyledButton sdsType="secondary" sdsStyle="minimal">
+            Minimal Secondary
           </StyledButton>
         </ButtonGroup>
       </CodeExampleWrapper>
@@ -120,10 +160,10 @@ export default function Home() {
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </DialogContent>
           <DialogActions buttonPosition="right">
-            <Button sdsType="secondary" sdsStyle="square" onClick={handleClose}>
+            <Button sdsType="secondary" sdsStyle="solid" onClick={handleClose}>
               Cancel
             </Button>
-            <Button sdsType="primary" sdsStyle="square" onClick={handleClose}>
+            <Button sdsType="primary" sdsStyle="solid" onClick={handleClose}>
               Save
             </Button>
           </DialogActions>
@@ -147,7 +187,7 @@ export default function Home() {
           }}
           titleText="SDS Docs"
           decorativeBorder
-          icon={<Icon sdsIcon="DNA" sdsSize="xl" />}
+          icon={<Icon sdsIcon="Read" sdsSize="xl" />}
           metadataText="ZeroHeight Documentation"
         >
           <ContentCardBody>
@@ -166,7 +206,7 @@ export default function Home() {
           }}
           titleText="Next.js Docs"
           decorativeBorder
-          icon={<Icon sdsIcon="DNA" sdsSize="xl" />}
+          icon={<Icon sdsIcon="Book" sdsSize="xl" />}
           metadataText="NecxtJs Documentation"
         >
           <ContentCardBody>
