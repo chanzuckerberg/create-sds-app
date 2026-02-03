@@ -142,9 +142,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@czi-sds/components@npm:^23.1.0":
-  version: 23.1.0
-  resolution: "@czi-sds/components@npm:23.1.0"
+"@czi-sds/components@file:../sci-components/packages/components::locator=create-sds-app%40workspace%3A.":
+  version: 23.3.2
+  resolution: "@czi-sds/components@file:../sci-components/packages/components#../sci-components/packages/components::hash=cf16dc&locator=create-sds-app%40workspace%3A."
   dependencies:
     chroma-js: "npm:^3.1.2"
   peerDependencies:
@@ -157,7 +157,7 @@ __metadata:
     "@mui/material": ^5.15.3
     react: ">=17.0.1"
     react-dom: ">=17.0.1"
-  checksum: 10c0/6fc418726e02d6d28bd54c621f9dec0111173cd1537ebbced350a06192b3a6bc1032b3f4ba55f3e14be1389de8a7c3adefee10e3f9af6ea9c9f9024ef6f851fa
+  checksum: 10c0/b0c831d9cdc83d0fbf5740920dbb7ad5d4c77d17c430106766047d577de873b9a2cf5af240e65bbbf9d337b97f5ec80550e172116b59bd31047ce7cc138ad3b9
   languageName: node
   linkType: hard
 
@@ -2178,7 +2178,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "create-sds-app@workspace:."
   dependencies:
-    "@czi-sds/components": "npm:^23.1.0"
+    "@czi-sds/components": ../sci-components/packages/components
     "@emotion/cache": "npm:^11.14.0"
     "@emotion/css": "npm:^11.11.2"
     "@emotion/react": "npm:^11.11.3"
