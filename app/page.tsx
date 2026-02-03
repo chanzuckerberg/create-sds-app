@@ -1,7 +1,7 @@
 "use client";
 
 import {
-  ButtonGroup,
+  ButtonsWrapper,
   Code,
   CodeExampleWrapper,
   Description,
@@ -20,6 +20,7 @@ import {
   DialogActions,
   Button,
   Link,
+  ButtonGroup,
 } from "@czi-sds/components";
 import { useState } from "react";
 
@@ -52,7 +53,19 @@ export default function Home() {
 
       <CodeExampleWrapper>
         <p>Example SDS Buttons:</p>
+
         <ButtonGroup>
+          <StyledButton sdsType="primary" size="large">
+            <Icon sdsIcon="Gene" sdsSize="s" />
+          </StyledButton>
+          <StyledButton sdsType="primary" size="large">
+            <Icon sdsIcon="CirclesOverlap2" sdsSize="s" />
+          </StyledButton>
+          <StyledButton sdsType="primary" size="large">
+            <Icon sdsIcon="Cube" sdsSize="s" />
+          </StyledButton>
+        </ButtonGroup>
+        <ButtonsWrapper>
           <StyledButton sdsType="primary" size="large">
             <Icon sdsIcon="Gene" sdsSize="s" />
           </StyledButton>
@@ -72,9 +85,9 @@ export default function Home() {
           <StyledButton sdsType="secondary" sdsStyle="solid">
             Solid Secondary
           </StyledButton>
-        </ButtonGroup>
+        </ButtonsWrapper>
 
-        <ButtonGroup>
+        <ButtonsWrapper>
           <StyledButton sdsType="primary" size="large" sdsStyle="outline">
             <Icon sdsIcon="Gene" sdsSize="s" />
           </StyledButton>
@@ -94,9 +107,9 @@ export default function Home() {
           <StyledButton sdsType="secondary" sdsStyle="outline">
             Outline Secondary
           </StyledButton>
-        </ButtonGroup>
+        </ButtonsWrapper>
 
-        <ButtonGroup>
+        <ButtonsWrapper>
           <StyledButton sdsType="primary" size="large" sdsStyle="minimal">
             <Icon sdsIcon="Gene" sdsSize="s" />
           </StyledButton>
@@ -116,7 +129,7 @@ export default function Home() {
           <StyledButton sdsType="secondary" sdsStyle="minimal">
             Minimal Secondary
           </StyledButton>
-        </ButtonGroup>
+        </ButtonsWrapper>
       </CodeExampleWrapper>
 
       <CodeExampleWrapper>
@@ -144,7 +157,12 @@ export default function Home() {
       <CodeExampleWrapper>
         <p>Example SDS Dialog:</p>
         <div>
-          <Button sdsStyle="minimal" sdsType="primary" onClick={handleClick}>
+          <Button
+            sdsStyle="minimal"
+            sdsType="primary"
+            onClick={handleClick}
+            backgroundOnHover={false}
+          >
             Open SDS Dialog
           </Button>
         </div>

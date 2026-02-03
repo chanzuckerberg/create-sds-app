@@ -110,7 +110,7 @@ export const Main = styled.main`
   }
 `;
 
-export const ButtonGroup = styled.div`
+export const ButtonsWrapper = styled.div`
   display: flex;
   gap: 1rem;
   width: 100%;
