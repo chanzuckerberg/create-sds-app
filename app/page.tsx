@@ -15,6 +15,7 @@ import {
   ContentCard,
   ContentCardBody,
   Dialog,
+  DialogExtraProps,
   DialogTitle,
   DialogContent,
   DialogActions,
@@ -24,12 +25,13 @@ import {
 } from "@czi-sds/components";
 import { useState } from "react";
 
-const sizeOptions = [
+type DialogSize = NonNullable<DialogExtraProps["sdsSize"]>;
+
+const sizeOptions: { name: string; value: DialogSize }[] = [
   { name: "Size xs", value: "xs" },
   { name: "Size s", value: "s" },
   { name: "Size m", value: "m" },
   { name: "Size l", value: "l" },
-  { name: "Size xl", value: "xl" },
 ];
 
 export default function Home() {
@@ -163,10 +165,14 @@ export default function Home() {
             onClick={handleClick}
             backgroundOnHover={false}
           >
-            Open SDS Dialog
+            Open SDS {selectedSize.value.toUpperCase()} Dialog
           </Button>
         </div>
-        <Dialog onClose={handleClose} open={isOpen} sdsSize="xs">
+        <Dialog
+          onClose={handleClose}
+          open={isOpen}
+          sdsSize={selectedSize.value}
+        >
           <DialogTitle
             title="Dialog Title"
             subtitle="This is an optional subtitle"
