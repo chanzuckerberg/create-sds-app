@@ -19,6 +19,7 @@ yarn lint         # Run ESLint
 ## Architecture
 
 ### Technology Stack
+
 - **Next.js 15** with App Router (app directory structure)
 - **@czi-sds/components** (v22.11.0) - Science Design System component library
 - **Material-UI v5** - Base UI framework that SDS extends
